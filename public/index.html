@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анализатор конверсионности страниц</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <h1>Анализатор конверсионности страниц</h1>
+        <p>Вставьте ссылку на страницу, и сервис соберёт данные, оценит конверсию по структурированной методике и подготовит отчёт с беклогом задач.</p>
+        <form id="analyze-form" class="form-card">
+          <label for="page-url">URL страницы</label>
+          <input id="page-url" name="page-url" type="url" placeholder="https://example.com" required />
+          <button type="submit">Анализировать</button>
+        </form>
+        <div id="status" class="status-block">Готов к анализу</div>
+      </section>
+
+      <section id="result-section" class="result-section hidden">
+        <div class="result-toolbar">
+          <h2>Отчёт</h2>
+          <a id="download-link" href="#" class="download-btn">Скачать HTML</a>
+        </div>
+        <div id="result-content" class="result-card"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
